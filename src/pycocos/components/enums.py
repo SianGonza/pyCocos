@@ -81,7 +81,6 @@ class Settlement(Enum):
 
     T0 = "CI"
     T1 = "24hs"
-    T2 = "48hs"
     NONE = ""
 
 class PerformanceTimeframe(Enum):
