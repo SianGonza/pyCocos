@@ -1145,7 +1145,7 @@ class Cocos:
                 - <CURRENCY> represents the currency code.
 
         Examples:
-            long_ticker("AAPL", Settlements.T2, Currency.PESOS) returns "AAPL-0003-C-CT-ARS"
+            long_ticker("AAPL", Settlements.T1, Currency.PESOS) returns "AAPL-0003-C-CT-ARS"
             long_ticker("GOOGD", Settlements.T0, Currency.USD) returns "GOOGD-0001-C-CT-USD"
             long_ticker("GFGC500.JU", Settlements.T1, Currency.PESOS, Segment.OPTIONS) returns "GFGC500.JU-0002-O-CT-ARS"
 
@@ -1306,7 +1306,6 @@ class Cocos:
         byma_settlement_map: dict[Settlement, str] = {
             Settlement.T0: "0001",
             Settlement.T1: "0002",
-            Settlement.T2: "0003",
         }
         return byma_settlement_map.get(settlement, "")
 
@@ -1323,7 +1322,6 @@ class Cocos:
         cocos_settlement_map: dict[str, Settlement] = {
             "0001": Settlement.T0,
             "0002": Settlement.T1,
-            "0003": Settlement.T2,
         }
         return cocos_settlement_map.get(settlement)
 
